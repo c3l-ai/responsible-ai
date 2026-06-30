@@ -2,8 +2,14 @@
 
 Landing site for the co-design workshop **Fairness & Trust in Educational AI**.
 
-A single static page (`index.html`) — no build step. Pushed to `main`, it deploys
-itself to GitHub Pages via the workflow in `.github/workflows/deploy.yml`.
+A static site — no build step. Pushed to `main`, it deploys itself to GitHub Pages
+via the workflow in `.github/workflows/deploy.yml`.
+
+```
+index.html              markup only
+css/styles.css          all styles
+scripts/                (no JavaScript in the current design)
+```
 
 ## Live URL
 
@@ -21,7 +27,8 @@ https://<owner>.github.io/responsible-ai/
 
 ## Editing
 
-Everything lives in `index.html`. Three things are marked with `<!-- TODO -->` comments:
+Content and markup live in `index.html`; all styling lives in `css/styles.css`.
+Three things in `index.html` are marked with `<!-- TODO -->` comments:
 
 - the **registration link** (appears in three places),
 - the **date & time** (currently "To be confirmed").
