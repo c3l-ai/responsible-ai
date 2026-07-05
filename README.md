@@ -8,8 +8,13 @@ via the workflow in `.github/workflows/deploy.yml`.
 ```
 index.html              markup only
 css/styles.css          all styles
+imgs/                   organiser photos: oscar.jpeg, olga.jpeg, srecko.jpeg
 scripts/                (no JavaScript in the current design)
 ```
+
+Organiser cards show the person's initials until a matching photo is added to
+`imgs/`. Drop in `oscar.jpeg` / `olga.jpeg` / `srecko.jpeg` (square works best) and
+the photo replaces the initials automatically — no markup change needed.
 
 ## Live URL
 
