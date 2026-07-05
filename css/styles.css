@@ -209,10 +209,14 @@
   .org .avatar{position:relative;width:56px;height:56px;border-radius:50%;overflow:hidden;
     background:var(--teal-tint);display:flex;align-items:center;justify-content:center;margin-bottom:1rem}
   .org .avatar .ini{font-weight:700;font-size:1.12rem;color:var(--teal);letter-spacing:.02em}
-  /* Photo layer: set per-card via the --photo custom property (e.g. url('imgs/oscar.jpeg')).
-     If the file is absent, nothing paints and the initials show through. */
+  /* Photo layer painted over the initials. Paths are relative to THIS stylesheet
+     (the css/ folder), so ../imgs/ points at the site's imgs/ folder. A missing
+     file simply doesn't paint, leaving the initials visible as a placeholder. */
   .org .avatar::after{content:"";position:absolute;inset:0;border-radius:inherit;
-    background-image:var(--photo);background-size:cover;background-position:center;background-repeat:no-repeat}
+    background-size:cover;background-position:center;background-repeat:no-repeat}
+  .org .avatar.oscar::after{background-image:url('../imgs/oscar.jpeg')}
+  .org .avatar.olga::after{background-image:url('../imgs/olga.jpeg')}
+  .org .avatar.srecko::after{background-image:url('../imgs/srecko.jpeg')}
   .org h3{font-weight:700;font-size:1.12rem;letter-spacing:-.02em;margin:0 0 .2rem}
   .org .aff{color:var(--ink-soft);font-size:.94rem;margin:0 0 1rem}
   .org .profile{font-size:.9rem;font-weight:600;color:var(--teal);display:inline-flex;align-items:center;gap:.4ch;margin-top:auto}
